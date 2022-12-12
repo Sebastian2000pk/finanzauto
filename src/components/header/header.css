@@ -1,0 +1,6 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(116, 202, 132);
+  padding: 8px;
+}
