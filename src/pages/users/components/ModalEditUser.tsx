@@ -33,7 +33,8 @@ const ModalEditUser = ({ onClose, userId, onSucess }: ModalEditUserProps) => {
 
   const handleChange = async (e: any) => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    const newValues: any = { ...user, [name]: value };
+    setUser(newValues);
   };
 
   const handleSave = async () => {
@@ -213,7 +214,7 @@ const styles = {
   },
   itemsList: {
     display: "flex",
-    flexDirection: "column",
+    // flexDirection: "column",
     gap: "1rem",
     paddingBottom: "1rem",
   },

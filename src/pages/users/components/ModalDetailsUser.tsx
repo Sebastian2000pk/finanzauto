@@ -4,7 +4,12 @@ import Modal from "../../../components/modal/Modal";
 // interfaces
 import { IUserDetail } from "../../../interfaces/IUserDetail";
 
-const ModalDetailsUser = ({ onClose, userId }) => {
+interface ModalEditUserProps {
+  onClose: () => void;
+  userId?: string;
+}
+
+const ModalDetailsUser = ({ onClose, userId }: ModalEditUserProps) => {
   const [user, setUser] = useState<IUserDetail>();
 
   useEffect(() => {
@@ -98,7 +103,7 @@ const ModalDetailsUser = ({ onClose, userId }) => {
 const styles = {
   itemsList: {
     display: "flex",
-    flexDirection: "column",
+    // flexDirection: "column",
     gap: "1rem",
     paddingBottom: "1rem",
   },
